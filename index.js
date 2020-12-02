@@ -23,10 +23,10 @@ fs.writeFile(file, JSON.stringify(json), function (err) {
     console.log('文件创建成功，地址：' + file);
 });
 var config = {
-    user: "tangdouapp/tangdouapp",
+    user: "服务器用户",
     // Password optional, prompted if none given
-    password: "tangdouapp#123",
-    host: "v0.ftp.upyun.com",
+    password: "服务器密码",
+    host: "主机",
     port: 21,
     localRoot: __dirname + "/dist",
     remoteRoot: "/cdn/activity/rules",
@@ -44,6 +44,6 @@ var config = {
 ftpDeploy
     .deploy(config)
     .then(res => {
-        console.log("Upload Complete : https://aimg.tangdou.com/cdn/activity/rules/" + RULE_FILE_NAME + '.json')
+        console.log("Upload Complete" + RULE_FILE_NAME + '.json')
     })
     .catch(err => console.log(err));
